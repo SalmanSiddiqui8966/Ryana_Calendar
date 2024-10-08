@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="./Images/ICON.ico" rel="icon">
+</head>
+<style>
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #eb4c37;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    #myBtn:hover {
+        background-color: black;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 5.5rem;
+        scroll-behavior: smooth;
+    }
+
+    section {
+        padding: 2rem 9%;
+    }
+
+    section:nth-child(even) {
+        background: #eee;
+    }
+
+    .sub-heading {
+        text-align: center;
+        color: var(--green);
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    .heading {
+
+        text-align: center;
+        color: var(--black);
+        font-size: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+
+    }
+
+
+
+
+    .btn {
+        margin-top: 1rem;
+        display: inline-block;
+        font-size: 1.7rem;
+        color: #fff;
+        background: var(--black);
+        border-radius: .5rem;
+        cursor: pointer;
+        padding: .8rem 3rem;
+    }
+
+    .btn:hover {
+        background: black;
+        letter-spacing: .1rem;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 1rem 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+    }
+</style>
+
+<body>
+
+    <header>
+
+        <a href="#" class="logo"><img src="./Images/rayana logo change 2.png" alt=""></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a class="active" href="about.html">about us</a>
+            <a href="#product.html">products</a>
+            <a href="#order">order</a>
+            <a href="Contact Us.html">contact us</a>
+
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+
+    </header>
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+
+
+
+
+    <section class="about" id="about">
+
+        <div class="row">
+
+            <div class="image">
+                <img src="./Images/Diary Calendar Product 8.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>Most Selling Product of the month</h3>
+                <p>Ryana Calendars – Red Velvet Diary. Ryana Calendars' 12-month weekly diary covers a range of times
+                    from January to December 2022, with an area dedicated to the entire week on the left and a ruled
+                    page on the right for taking notes and
+                    to-do lists. The planner has a hardcover, rounded corners, ivory-colored 70 g/m² paper, an
+                    expandable inner pocket, the iconic "in case of loss" notice on the front endpaper, and a bookmark
+                    in the same color as the cover. On the re-usable
+                    paper band, B-SIDE additional tools are printed and the planner opens to 180° for greater
+                    convenience while writing and thinking. The package contains a 12-month weekly planner for 2022 with
+                    a hardcover, available in Large Size 13
+                    x 21 cm, red Velvet.</p>
+
+
+
+                <div class="icons-container">
+                    <div class="icons">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>free delivery</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>easy payments</span>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-headset"></i>
+                        <span>24/7 service</span>
+                    </div>
+                </div>
+                <a href="#" class="btn">learn more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="diaries" id="diaries">
+
+        <h1 style="font-size: 5rem;" class="sub-heading"> Our Services </h1>
+        <h3 class="heading">Our Best Value</h3>
+
+        <div class="box-container">
+
+
+
+            <div class="box">
+                <img src="./Images/cat-2.png">
+                <h3>Fast Delivery</h3>
+            </div>
+
+            <div class="box">
+                <img src="./Images/cat-3.png">
+                <h3>100K+ Satisfied Customer</h3>
+            </div>
+
+            <div class="box ">
+                <img src="./Images/cat-4.png">
+                <h3>Quality Products</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="items " id="items ">
+
+        <h3 class="sub-heading "> our Premiums </h3>
+        <h1 class="heading ">Our Premium Products</h1>
+
+        <div class="box-container ">
+
+            <div class="box ">
+                <div class="image ">
+                    <img src="./Images/Diary Calendar Product 7.jpg " alt=" ">
+                    <a href="# " class="fas fa-heart "></a>
+                </div>
+                <div class="content ">
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star-half-alt "></i>
+                    </div>
+                    <h3>Spiral Diary</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="# " class="btn ">add to cart</a>
+                    <span class="price ">Rs.599/-</span>
+                </div>
+            </div>
+
+            <div class="box ">
+                <div class="image ">
+                    <img src="./Images/Rayana Calendar 4.jpg " alt=" ">
+                    <a href="# " class="fas fa-heart "></a>
+                </div>
+                <div class="content ">
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star-half-alt "></i>
+                    </div>
+                    <h3>Table Calendar</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="# " class="btn ">add to cart</a>
+                    <span class="price ">Rs.699/-</span>
+                </div>
+            </div>
+
+            <div class="box ">
+                <div class="image ">
+                    <img src="./Images/Rayana Diary Mockup 1.jpg " alt=" ">
+                    <a href="# " class="fas fa-heart "></a>
+                </div>
+                <div class="content ">
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star-half-alt "></i>
+                    </div>
+                    <h3>Leather Diary</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="# " class="btn ">add to cart</a>
+                    <span class="price ">Rs.799/-</span>
+                </div>
+            </div>
+
+            <div class="box ">
+                <div class="image ">
+                    <img src="./Images/Rayana Calendar 5.jpg " alt=" ">
+                    <a href="# " class="fas fa-heart "></a>
+                </div>
+                <div class="content ">
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star-half-alt "></i>
+                    </div>
+                    <h3>NotePad Diary</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="# " class="btn ">add to cart</a>
+                    <span class="price ">Rs.565/-</span>
+                </div>
+            </div>
+
+            <div class="box ">
+                <div class="image ">
+                    <img src="./Images/Rayana Diary 6.jpg " alt=" ">
+                    <a href="# " class="fas fa-heart "></a>
+                </div>
+                <div class="content ">
+                    <div class="stars ">
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star "></i>
+                        <i class="fas fa-star-half-alt "></i>
+                    </div>
+                    <h3>Personal Diary</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
+                    <a href="# " class="btn ">add to cart</a>
+                    <span class="price ">Rs.580/-</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="review " id="review ">
+
+        <h3 class="sub-heading "> customer's review </h3>
+        <h1 class="heading "> what they say </h1>
+
+        <div class="swiper-container review-slider ">
+
+            <div class="swiper-wrapper ">
+
+                <div class="swiper-slide slide ">
+                    <i class="fas fa-quote-right "></i>
+                    <div class="user ">
+                        <img src="./images/profile02.jpg " alt=" ">
+                        <div class="user-info ">
+                            <h3>Salman Siddiqui</h3>
+                            <div class="stars ">
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star-half-alt "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo consequatur obcaecati.
+                        Consequatur beatae deleniti culpa recusandae? Aliquid autem dolorum adipisci incidunt! Rem
+                        officiis nisi mollitia corrupti nam laudantium possimus.
+                    </p>
+                </div>
+
+                <div class="swiper-slide slide ">
+                    <i class="fas fa-quote-right "></i>
+                    <div class="user ">
+                        <img src="./images/profile02.jpg" alt=" ">
+                        <div class="user-info ">
+                            <h3>Salman Siddiqui</h3>
+                            <div class="stars ">
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo consequatur obcaecati.
+                        Consequatur beatae deleniti culpa recusandae? Aliquid autem dolorum adipisci incidunt! Rem
+                        officiis nisi mollitia corrupti nam laudantium possimus.</p>
+                </div>
+
+                <div class="swiper-slide slide ">
+                    <i class="fas fa-quote-right "></i>
+                    <div class="user ">
+                        <img src="./images/profile02.jpg" alt=" ">
+                        <div class="user-info ">
+                            <h3>Salman Siddiqui</h3>
+                            <div class="stars ">
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star-half-alt "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo consequatur obcaecati.
+                        Consequatur beatae deleniti culpa recusandae? Aliquid autem dolorum adipisci incidunt! Rem
+                        officiis nisi mollitia corrupti nam laudantium possimus.</p>
+                </div>
+
+                <div class="swiper-slide slide ">
+                    <i class="fas fa-quote-right "></i>
+                    <div class="user ">
+                        <img src="./images/profile02.jpg " alt=" ">
+                        <div class="user-info ">
+                            <h3>Salman Siddiqui</h3>
+                            <div class="stars ">
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star "></i>
+                                <i class="fas fa-star-half-alt "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quo consequatur obcaecati.
+                        Consequatur beatae deleniti culpa recusandae? Aliquid autem dolorum adipisci incidunt! Rem
+                        officiis nisi mollitia corrupti nam laudantium possimus.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="footer ">
+
+        <div class="box-container ">
+
+
+            <div class="box ">
+                <h3>quick links</h3>
+                <a href="# ">➔ home</a>
+                <a href="# ">➔ about us</a>
+                <a href="# ">➔ products</a>
+                <a href="# ">➔ order</a>
+                <a href="# ">➔ contact us</a>
+            </div>
+
+            <div class="box ">
+                <h3>contact info</h3>
+                <a href="# ">➔ +92 3101242766</a>
+                <a href="# ">➔ +92 456151881</a>
+                <a href="# ">➔ salmannasirsiddiqui@gmail.com</a>
+                <a style="text-transform: lowercase; " href="# ">➔ Www.rayanacaledars.com</a>
+                <a href="# ">➔ North Nazimabad, Karachi</a>
+            </div>
+
+            <div class="box ">
+                <h3>follow us</h3>
+                <a href="# ">➔ facebook</a>
+                <a href="# ">➔ twitter</a>
+                <a href="# ">➔ instagram</a>
+                <a href="# ">➔ linkedin</a>
+            </div>
+
+        </div>
+
+        <div class="credit "> copyright @ 2022 by <span>Salman Siddiqui</span> </div>
+
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+    <script>
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+    </script>
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+    <script src="script.js "></script>
+
+
+</body>
+
+</html>

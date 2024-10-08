@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="./Images/ICON.ico" rel="icon">
+</head>
+<style>
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #eb4c37;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    #myBtn:hover {
+        background-color: black;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 5.5rem;
+        scroll-behavior: smooth;
+    }
+
+    section {
+        padding: 2rem 9%;
+    }
+
+    section:nth-child(even) {
+        background: #eee;
+    }
+
+    .sub-heading {
+        text-align: center;
+        color: var(--green);
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    .heading {
+
+        text-align: center;
+        color: var(--black);
+        font-size: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+
+    }
+
+
+
+
+    .btn {
+        margin-top: 1rem;
+        display: inline-block;
+        font-size: 1.7rem;
+        color: #fff;
+        background: var(--black);
+        border-radius: .5rem;
+        cursor: pointer;
+        padding: .8rem 3rem;
+    }
+
+    .btn:hover {
+        background: black;
+        letter-spacing: .1rem;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 1rem 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+    }
+</style>
+
+<body>
+
+    <header>
+
+        <a href="#" class="logo"><img src="./Images/rayana logo change 2.png" alt=""></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about.html">about us</a>
+            <a href="#product.html">products</a>
+            <a href="#order">order</a>
+            <a class="active" href="contact us">contact us</a>
+
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+
+    </header>
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    <section class="order" id="order">
+        <br> <br> <br>
+
+        <h1 class="heading"> Have a Query in Mind? <br> <span style="font-size: 2.5rem;">Feel free to Contact Us!</span>
+        </h1>
+
+        <form action="">
+
+            <div class="inputBox">
+                <div class="input">
+                    <span>Your Name</span>
+                    <input type="text" placeholder="enter your name">
+                </div>
+                <div class="input">
+                    <span>Your Email Addres</span>
+                    <input type="email" placeholder="enter your email address">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Your Phone Number</span>
+                    <input type="number" placeholder="enter your phone number">
+                </div>
+                <div class="input">
+                    <span>Subject</span>
+                    <input type="text" placeholder="enter your subject">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>your address</span>
+                    <textarea name="" placeholder="enter your address" id="" cols="20" rows="10"></textarea>
+                </div>
+                <div class="input">
+                    <span>your message</span>
+                    <textarea name="" placeholder="enter your message" id="" cols="20" rows="10"></textarea>
+                </div>
+            </div>
+
+            <input type="submit" value="order now" class="btn">
+
+        </form>
+
+    </section>
+
+
+
+
+    <section class="footer ">
+
+        <div class="box-container ">
+
+
+            <div class="box ">
+                <h3>quick links</h3>
+                <a href="# ">➔ home</a>
+                <a href="# ">➔ about us</a>
+                <a href="# ">➔ products</a>
+                <a href="# ">➔ order</a>
+                <a href="# ">➔ contact us</a>
+            </div>
+
+            <div class="box ">
+                <h3>contact info</h3>
+                <a href="# ">➔ +92 3101242766</a>
+                <a href="# ">➔ +92 456151881</a>
+                <a href="# ">➔ salmannasirsiddiqui@gmail.com</a>
+                <a style="text-transform: lowercase; " href="# ">➔ Www.rayanacaledars.com</a>
+                <a href="# ">➔ North Nazimabad, Karachi</a>
+            </div>
+
+            <div class="box ">
+                <h3>follow us</h3>
+                <a href="# ">➔ facebook</a>
+                <a href="# ">➔ twitter</a>
+                <a href="# ">➔ instagram</a>
+                <a href="# ">➔ linkedin</a>
+            </div>
+
+        </div>
+
+        <div class="credit "> copyright @ 2022 by <span>Salman Siddiqui</span> </div>
+
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+    <script>
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+    </script>
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+    <script src="script.js "></script>
+
+
+</body>
+
+</html>

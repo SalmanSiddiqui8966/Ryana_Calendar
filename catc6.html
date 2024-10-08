@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="./images/icon.jpg.ico" rel="icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+:root {
+    --green: #eb4c37;
+    --black: #eb4c37;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+section:nth-child(even) {
+    background: #eee;
+}
+
+.sub-heading {
+    text-align: center;
+    color: var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading {
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: var(--black);
+    letter-spacing: .1rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i {
+    color: var(--green);
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    margin: 10px;
+    color: var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+    color: #fff;
+    background: var(--green);
+}
+
+header .icons i,
+header .icons a {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+    color: #fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars {
+    display: none;
+}
+
+#search-form {
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+#search-form.active {
+    top: 0;
+}
+
+#search-form #search-box {
+    width: 50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+}
+
+#search-form #search-box::placeholder {
+    color: #eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+#search-form label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover {
+    color: var(--green);
+}
+
+#search-form #close {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+}
+
+.home .home-slider .slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+}
+
+.home .home-slider .slide .content {
+    flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image {
+    flex: 1 1 45rem;
+}
+
+.home .home-slider .slide .image img {
+    width: 100%;
+}
+
+.home .home-slider .slide .content span {
+    color: var(--green);
+    font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content h3 {
+    -size: 2.2rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+
+
+
+
+
+/* button css start*/
+
+
+
+
+.add-to-cart{
+    width: 100%;
+    height: 600px;
+    background-color: #eb4c37;
+    margin-top: 85px;
+    
+
+}
+.bg-atc{
+    width: 80%;
+    height: 500px;
+    background-color: rgb(219, 218, 218);
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+    float: left;
+
+}
+.logo-type{
+    width: 15%;
+    height: 700px;
+    float: right;
+
+}
+.logo-type .onelogo{
+    width: 190px;
+    height: 250px;
+    margin-top: 30px;
+    border-radius: 130px;
+
+}
+.logo-type .twologo{
+    width: 180px;
+    height: 180px;
+    margin-top: 80px;
+    border-radius: 130px;
+
+}
+.work-atc{
+    width: 90%;
+    height: 450px;
+    margin: auto;
+    background-color: white;
+    margin-top: 25px;
+    
+
+
+}
+.upward{
+    width: 100%;
+    height: 370px;
+    background-color: white;
+}
+.main{
+    width: 50%;
+    height: 350px;
+    float: left;
+}
+.main img{
+    width: 80%;
+    height: 300px;
+    margin: 50px;
+    margin-top: 25px;
+
+}
+.aside{
+    width: 50%;
+    height: 350px;
+    float: right;
+    padding-top: 40px;
+
+}
+.aside h1{
+    font-size: xx-large;
+}
+.aside h3{
+    font-size: x-large;
+}
+.aside p{
+    font-size: 15px;
+}
+.aside label{
+    font-size: 20px;
+}
+.aside input{
+    border-style: solid;
+    border-color: black;
+    margin-left: 10px;
+}
+.aside button{
+    width: 150px;
+    height: 40px;
+    background-color: #eb4c37;
+    color: white;
+    border-radius: 5px;
+    font-size: large;
+
+}
+.aside button:hover{
+    background-color: black;
+    font-size: 15px;
+}
+
+.downward{
+    width: 100%;
+    height: 80px;
+    
+}
+.downward h1{
+    text-decoration-line: overline; 
+    padding-left: 400px;
+}
+.suggestion{
+    margin-left: 150px;
+
+}
+.suggestion h1{
+    font-size: 30px;
+    padding-top: 30px;
+}
+hr.new1 {
+    border-top: 1px solid red;
+    
+  }
+  .products{
+    width: 95%;
+    height: 550px;
+    margin: 0 auto;
+    background-color: rgb(218, 214, 214);
+    display: flex;
+    
+}
+.oneproduct{
+    width: 30%;
+    height: 500px;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 27px;
+}
+.oneproduct img{
+    width: 320px;
+    height: 250px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+  
+
+}
+.write-center{
+    font-size: large;
+    padding-left: 60px;
+    padding-top: 20px;
+    color: #eb4c37;
+
+}
+.write-center i{
+    color: yellow;
+    padding-left: 10px;
+}
+
+.oneproduct h3{
+    color: #eb4c37;
+    float: left;
+    font-size: xx-large;
+    padding-left: 20px;
+}
+.oneproduct button{
+    float: right;
+    height: 40px;
+    width: 180px;
+    margin-right: 30px;
+    background-color: #eb4c37;
+    color: #eee;
+    font-size: 20px;
+    font-weight: 1000;
+    border-radius: 10px;
+}
+.oneproduct button:hover{
+    background-color: black;
+    font-size: 22px;
+}
+.downward #review {
+    margin-left: 320px;
+    font-size: x-large;
+    font-weight: 1000;
+    color: #eb4c37;
+}
+.downward #like {
+    margin-left: 280px;
+    font-size: x-large;
+    font-weight: 1000;
+    color: #eb4c37;
+}
+
+
+
+
+
+
+  /*footer css start  */
+  .footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    padding:.5rem 0;
+    font-size: 2.5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+.footer .box-container .box h3:hover{
+    color: black;
+    border-radius: 2rem;
+  
+    box-sizing: border-box;
+}
+
+.footer .box-container .box a{
+    display: block;
+    padding:.5rem 0;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.footer .box-container .box a:hover{
+    color:var(--green);
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+   
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 2rem;
+    color:var(--black);
+    padding:.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    background-color: black;
+}
+
+.footer .credit span{
+    color:var(--green);
+
+}
+.oneproduct .writebutton{
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #eb4c37;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: black;
+  }
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+section:nth-child(even){
+    background:#eee;
+}
+
+.sub-heading{
+    text-align: center;
+    color:var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading{
+    
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+
+}
+
+
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+.btn:hover{
+    background: black;
+    letter-spacing: .1rem;
+}
+
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background: #fff;
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+
+
+
+
+
+
+
+
+
+/* button css end */
+
+
+
+</style>
+
+<body>
+    <header>
+
+        <a href="#" class="logo"><img src="./images/rayana logo change 2.png" alt=""></a>
+
+        <nav class="navbar">
+            <a class="active" href="#home">home</a>
+            <a href="#about us">about us</a>
+            <a href="product.html">products</a>
+            <a href="#order">order</a>
+            <a href="#contact us">contact us</a>
+
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+        </div>
+
+    </header>
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+
+    <!-- add to cart start -->
+
+    <div class="addtocart">
+        <div class="add-to-cart">
+            <div class="bg-atc">
+                <div class="work-atc">
+                    <div class="upward">
+                        <div class="main">
+                            <a href="fas fa-eye">
+                            </a>
+                            <img src="./images/c6.jpg.jpg" alt="">
+                        </div>
+                        <div class="aside">
+                            <h1>table calender </h1>
+                            <h3>march release</h3><br><br>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quaerat amet saepe
+                                vel
+                                molestias modi similique molestiae eveniet, quasi esse accusantium nam laborum incidunt.
+                                Minus amet temporibus aliquam fugiat non!
+                            </p><br>
+                            <label for="quantity">Quantity:</label>
+                            <input type="number"><br><br>
+                            <button type="button" onclick="document.getElementById('review').innerHTML = 'your order has confirmed.'">order</button>
+                            <button type="button" onclick="document.getElementById('like').innerHTML = 'order has added into the like option '">add to likelist</button>
+                            
+                        </div>
+                    </div>
+                    <div class="downward">
+                        <p id="review"></p>
+                        <p id="like"></p>
+                        <h1>recent reviews</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-type">
+                <img src="./images/icon.jpg.ico" alt="" class="onelogo">
+                <img src="./images/profile02.jpg" alt="" class="twologo">
+            </div>
+        </div>
+        <div class="suggestion">
+            <h1>suggestion</h1>
+            <hr class="new1">
+        </div>
+        <!-- suggetion products -->
+        <div class="products">
+            <div class="oneproduct">
+                <img src="./images/c1.jpg.jpg" alt="">
+                <div class="write-center">
+                    <h1>Red Mini Calender</h1>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="writebutton">
+                    <h3>RS.250/-</h3>
+                    <a href="catc1.html"><button>Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="oneproduct">
+                <img src="./images/c2.jpg.jpg" alt="">
+                <div class="write-center">
+                    <h1>Wall Calender</h1>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="writebutton">
+                    <h3>RS.499/-</h3>
+                    <a href="catc2.html"><button>Add To Cart</button></a>
+                </div>
+            </div>
+            <div class="oneproduct">
+                <img src="./images/c3.jpg.jpg" alt="">
+                <div class="write-center">
+                    <h1>Wall Calender</h1>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="writebutton">
+                    <h3>RS.399/-</h3>
+                    <a href="catc3.html"><button>Add To Cart</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <!-- footer start -->
+        <section class="footer">
+
+            <div class="box-container">
+    
+    
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#">➔ home</a>
+                    <a href="#">➔ about us</a>
+                    <a href="#">➔ products</a>
+                    <a href="#">➔ order</a>
+                    <a href="#">➔ contact us</a>
+                </div>
+    
+                <div class="box">
+                    <h3>contact info</h3>
+                    <a href="#">➔ +92 3101242766</a>
+                    <a href="#">➔ +92 456151881</a>
+                    <a href="#">➔ salmannasirsiddiqui@gmail.com</a>
+                    <a style="text-transform: lowercase;" href="#">➔ Www.rayanacaledars.com</a>
+                    <a href="#">➔ North Nazimabad, Karachi</a>
+                </div>
+    
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#">➔ facebook</a>
+                    <a href="#">➔ twitter</a>
+                    <a href="#">➔ instagram</a>
+                    <a href="#">➔ linkedin</a>
+                </div>
+    
+            </div>
+    
+            <div class="credit"> copyright @ 2022 by <span>Salman Siddiqui</span> </div>
+        </section>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+    <script>
+        var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+mybutton.style.display = "block";
+} else {
+mybutton.style.display = "none";
+}
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+
+
+    </script>
+</body>
+
+</html>
